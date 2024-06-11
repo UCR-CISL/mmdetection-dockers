@@ -9,7 +9,7 @@ RUN mim install "mmdet3d>=1.1.0"
 
 # Packages
 RUN apt-get update 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git sudo nano mlocate libgl1 libglib2.0-0 --no-install-recommends
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git sudo wget nano mlocate libgl1 libglib2.0-0 --no-install-recommends
 
 # Create user
 RUN useradd -ms /bin/bash mmdet \
@@ -19,3 +19,5 @@ RUN useradd -ms /bin/bash mmdet \
 USER mmdet
 WORKDIR /home/mmdet
 
+RUN git clone https://github.com/open-mmlab/mmdetection3d
+WORKDIR /home/mmdet/mmdetection3d
