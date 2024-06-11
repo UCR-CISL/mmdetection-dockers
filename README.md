@@ -1,9 +1,10 @@
-# mmdetection-dockers
+# MMDetection3D-dockers
 
 This is a docker environment for [MMDetection3D](https://github.com/open-mmlab/mmdetection3d) repo. 
 To get started, read their [getting_started_doc](https://mmdetection3d.readthedocs.io/en/latest/get_started.html)
 
-#### MMDetection3D
+## MMDetection3D
+
 Build the image:
 ```
 docker build -t cisl/mmdet --file mmdet.Dockerfile .
@@ -24,7 +25,9 @@ mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --de
 And check outputs/preds/000008.json
 
 
-#### BEVFusion
+## BEVFusion
+
+
 Build the image:
 ```
 docker build -t cisl/bevfusion --file mmdet_bevfusion.Dockerfile .
