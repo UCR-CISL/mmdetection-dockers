@@ -3,6 +3,11 @@
 This is a docker environment for [MMDetection3D](https://github.com/open-mmlab/mmdetection3d) repo. 
 To get started, read their [getting_started_doc](https://mmdetection3d.readthedocs.io/en/latest/get_started.html)
 
+### Prerequisites
+Similar to carla official docker prerequisites
+* Install docker following instructions [here](https://docs.docker.com/engine/install/)
+* Install nvidia-docker2 following instructions [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installation-guide)
+
 ## MMDetection3D
 
 Build the image:
