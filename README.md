@@ -28,3 +28,21 @@ python demo/pcd_demo.py demo/data/kitti/000008.bin pointpillars_hv_secfpn_8xb6-1
 ```
 mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest .
 And check outputs/preds/000008.json
+
+
+## MMDetection3D with BEVFusion Extension and compilation
+
+To build an MMdetection3D image with BEVFusion support:
+```
+docker build -t mmdet3d-bevfusion --file mmdet_bevfusion.Dockerfile .
+```
+
+To run the container:
+```
+docker run -it --gpus all --name mmdet3d_container mmdet3d-bevfusion bash
+```
+
+verify BEVFusion is correctly compiled:
+```
+bash tools/dist_train.sh projects/BEVFusion/configs/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d.py 1
+```
