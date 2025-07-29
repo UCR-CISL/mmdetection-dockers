@@ -12,7 +12,7 @@ Similar to carla official docker prerequisites
 
 Build the image:
 ```
-docker build -t cisl/mmdet --file mmdet.Dockerfile .
+docker build -t cisl/mmdet -f mmdet.Dockerfile .
 ```
 
 To test, run
@@ -34,7 +34,7 @@ And check outputs/preds/000008.json
 
 To build an MMdetection3D image with BEVFusion support:
 ```
-docker build -t mmdet3d-bevfusion --file mmdet_bevfusion.Dockerfile .
+docker build -t mmdet3d-bevfusion -f mmdet_bevfusion.Dockerfile .
 ```
 
 To run the container:
@@ -42,7 +42,7 @@ To run the container:
 docker run -it --gpus all --name mmdet3d_container mmdet3d-bevfusion bash
 ```
 
-verify BEVFusion is correctly compiled:
+Verify BEVFusion is correctly compiled:
 ```
 bash tools/dist_train.sh projects/BEVFusion/configs/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d.py 1
 ```
