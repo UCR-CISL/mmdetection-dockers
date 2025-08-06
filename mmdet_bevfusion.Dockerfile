@@ -35,7 +35,8 @@ RUN pip install --no-cache-dir mmcv==2.1.0 -f https://download.openmmlab.com/mmc
     pip install --no-cache-dir \
     mmengine>=0.7.1 \
     mmdet>=3.0.0 \
-    mmdet3d==1.4.0
+    mmdet3d==1.4.0 \
+    spconv-cu121
 
 # Clone and install MMDetection3D, then setup BEVFusion if present
 RUN git clone https://github.com/open-mmlab/mmdetection3d.git -b dev-1.x /mmdetection3d && \
