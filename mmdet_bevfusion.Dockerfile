@@ -51,6 +51,8 @@ RUN cd /mmdetection3d && \
         echo "BEVFusion setup.py not found"; \
     fi
 
+RUN pip install spconv-cu124
+
 
 # Set working directory
 ENV PYTHONPATH=/mmdetection3d
